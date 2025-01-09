@@ -1,0 +1,16 @@
+{
+    "short_name": "StarWars",
+    "name": "StarWars Heroes App",
+    "icons": [
+        {
+            "src": "images/star-wars-logo.png",
+            "type": "image/png",
+            "sizes": "any"
+          }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "portrait", 
+    "scope": "/", 
+    "lang": "es"
+  }
