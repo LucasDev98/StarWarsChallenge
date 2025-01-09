@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+Desafío Star Wars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación desarrollada con React, TypeScript y Vite que se integra con la API de Star Wars (SWAPI) para mostrar una lista de personajes y sus detalles. Incluye características como paginación, carga de imágenes con respaldo y diseño responsivo.
+Características
 
-Currently, two official plugins are available:
+    Listado de Personajes: Muestra una lista de personajes de Star Wars con paginación.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    Detalles del Personaje: Muestra información detallada sobre cada personaje, incluyendo sus películas, especies, vehículos y naves estelares.
 
-## Expanding the ESLint configuration
+    Carga de Imágenes: Obtiene las imágenes de los personajes desde Star Wars Visual Guide con un respaldo para imágenes faltantes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+    Diseño Responsivo: Optimizado para dispositivos móviles y de escritorio.
+    
+Tecnologías Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+    React: Una biblioteca de JavaScript para construir interfaces de usuario.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    TypeScript: Añade tipado estático a JavaScript para una mejor experiencia de desarrollo.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    Vite: Una herramienta de construcción rápida para desarrollo web moderno.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+    Tailwind CSS: Un framework CSS basado en utilidades para estilos.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    Axios: Un cliente HTTP basado en promesas para realizar solicitudes a la API.
+
+Estructura del Proyecto
+
+    src/: Contiene el código fuente de la aplicación.
+
+        components/: Componentes reutilizables de React.
+
+        pages/: Páginas principales de la aplicación.
+
+        services/: Capa de servicios para interactuar con SWAPI.
+
+        interfaces/: Interfaces de TypeScript para las respuestas de la API.
+
+        assets/: Recursos estáticos como imágenes.
+
+    public/: Recursos públicos servidos directamente por Vite.
+
+    vite.config.ts: Archivo de configuración de Vite.
+
+    tsconfig.json: Archivo de configuración de TypeScript.
+
+    tailwind.config.js: Archivo de configuración de Tailwind CSS.
